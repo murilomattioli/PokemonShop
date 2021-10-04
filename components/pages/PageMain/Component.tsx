@@ -6,6 +6,8 @@ import { MainProps } from '../../../pages/Main';
 const PageMainComponentNoMemo: React.FC<MainProps> = props => {
   const { className } = props;
   const [authUserWithRedirect] = userHooks.useAuthUserWithRedirect();
+  const [getUser] = userHooks.useGetUser();
+  const user = useMemo(() => getUser(), []);
   const signupClassName = useMemo(() => `page-sign-up ${className}`, []);
 
   useEffect(() => {
@@ -15,7 +17,6 @@ const PageMainComponentNoMemo: React.FC<MainProps> = props => {
   return (
     <PageMainStyles {...props} className={signupClassName}>
       <title>Pokemon Shop - Main</title>
-      <ModalMain />
     </PageMainStyles>
   )
 };
