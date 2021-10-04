@@ -1,0 +1,5 @@
+export const MODAL_CONFIRM_DEFAULT_HEIGHT = 168;
+export const MODAL_CONFIRM_DEFAULT_WIDTH = 661;
+
+export const CANCEL_TEXT_DEFAULT = 'CANCEL';
+export const CONFIRM_TEXT_DEFAULT = 'OK';
