@@ -6,7 +6,7 @@
     <img src="public/appLogo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Pokemon Shop</h3>
+  <h3 align="center">Pokémon Shop</h3>
 
   <p align="center">
     <br />
