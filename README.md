@@ -2,7 +2,7 @@
 
 <br />
 <div align="center">
-  <a href="https://nextjs.org/">
+  <a href="https://pokemon-shop-theta.vercel.app" target="_blank">
     <img src="public/appLogo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -10,12 +10,12 @@
 
   <p align="center">
     <br />
-    <a href="https://github.com/murilomattioli/cl-network/"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/murilomattioli/PokemonShop/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://cl-network.vercel.app/">View Demo</a>
+    <a href="https://pokemon-shop-theta.vercel.app" target="_blank">View Demo</a>
     ·
-    <a href="https://github.com/murilomattioli/cl-network/issues">Report Bug</a>
+    <a href="https://github.com/murilomattioli/PokemonShop/issues" target="_blank">Report Bug</a>
   </p>
 </div>
 
@@ -28,7 +28,7 @@
     <li>
       <a href="#about-the-project">Project</a>
       <ul>
-        <li><a href="#about-the-project">View Demo</a></li>
+        <li><a href="#about-the-project" target="_blank">View Demo</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -48,7 +48,7 @@
 <!-- ABOUT THE PROJECT -->
 <!-- ## View Demo
 
-[![Product Name Screen Shot][product-screenshot]](https://cl-network.vercel.app/)
+[![Product Name Screen Shot][product-screenshot]](https://pokemon-shop-theta.vercel.app)
 
  -->
 
@@ -65,7 +65,7 @@
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/murilomattioli/cl-network.git
+   git clone https://github.com/murilomattioli/PokemonShop.git
    ```
 2. Install NPM packages
    ```sh
