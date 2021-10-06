@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { BUTTON_WIDTH, BUTTON_HEIGHT } from ".";
 import { Colors } from '../../styles/Colors';
 import { ButtonProperties } from "./Component";
@@ -11,17 +11,22 @@ export const ButtonStyles = styled.div<ButtonProperties>`
   height: ${({ height }) => height || BUTTON_HEIGHT.default}px;
   min-height: ${({ height }) => height || BUTTON_HEIGHT.default}px;
   max-height: ${({ height }) => height || BUTTON_HEIGHT.default}px;
-  width: ${() => BUTTON_WIDTH.default}px;
-  min-width: ${() => BUTTON_WIDTH.default}px;
-  max-width: ${() => BUTTON_WIDTH.default}px;
+  width: ${({ width }) => width || BUTTON_WIDTH.default}px;
+  min-width: ${({ width }) => width || BUTTON_WIDTH.default}px;
+  max-width: ${({ width }) => width || BUTTON_WIDTH.default}px;
+
+  &.--btn-circle {
+    border-radius: 50%;
+    overflow: hidden;
+  }
   
   &.--btn-icon {
-    height: ${() => BUTTON_HEIGHT.icon}px;
-    min-height: ${() => BUTTON_HEIGHT.icon}px;
-    max-height: ${() => BUTTON_HEIGHT.icon}px;
-    width: ${() => BUTTON_WIDTH.icon}px;
-    min-width: ${() => BUTTON_WIDTH.icon}px;
-    max-width: ${() => BUTTON_WIDTH.icon}px;
+    height: ${({ height }) => height || BUTTON_HEIGHT.icon}px;
+    min-height: ${({ height }) => height || BUTTON_HEIGHT.icon}px;
+    max-height: ${({ height }) => height || BUTTON_HEIGHT.icon}px;
+    width: ${({ width }) => width || BUTTON_WIDTH.icon}px;
+    min-width: ${({ width }) => width || BUTTON_WIDTH.icon}px;
+    max-width: ${({ width }) => width || BUTTON_WIDTH.icon}px;
 
     .btn-content {
       align-items: center;
@@ -37,8 +42,15 @@ export const ButtonStyles = styled.div<ButtonProperties>`
   .btn-content {
     display: flex;
     flex: 1;
-    background: ${({ color = 'black' }) => Colors?.[color]};
+    flex-direction: column;
+    background: ${({ color = 'black' }) => Colors[color]};
     box-shadow: 0 0 0 1px inset ${({ color = 'black' }) => (color === 'white' ? Colors.black : 'transparent')};
+    overflow: hidden;
+
+    .btn-icon {
+      font-size: 16px;
+      color: ${({ color = 'black' }) => Colors[`--icon-${color}`]}};
+    }
 
     .btn-text-wrapper {
       display: flex;
@@ -67,11 +79,27 @@ export const ButtonStyles = styled.div<ButtonProperties>`
 
     &:hover {
       cursor: pointer;
-      background: ${({ color = 'black' }) => Colors[`--hover-${color}`]};
+
+      ${({ color = 'black' }) => (color !== 'transparent') ? css`
+          background: ${() => Colors[`--hover-${color}`]};
+      `: css`
+        &.--btn-icon {
+          opacity: 0.08;
+        }
+      `}
     }
 
     &:active, &:focus {
-      background: ${({ color = 'black' }) => Colors[`--action-${color}`]};
+      * {
+        outline: none;
+      }
+
+      ${({ color = 'black' }) => (color !== 'transparent') ? css`
+          background: ${() => Colors[`--action-${color}`]};
+      `: css`
+          &.--btn-icon {
+            opacity: 0.16;
+          }
+      `}
     }
-  }
 `;
