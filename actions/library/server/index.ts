@@ -4,7 +4,7 @@ import usePatch from "./usePatch";
 import useDelete from "./useDelete";
 import * as useServerConfig from './Constants';
 
-export default {
+const useServer = {
   useGet,
   usePost,
   usePatch,
@@ -12,3 +12,4 @@ export default {
   useServerConfig
 };
 
+export default useServer;
