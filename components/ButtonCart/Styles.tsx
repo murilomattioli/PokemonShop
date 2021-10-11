@@ -59,7 +59,61 @@ export const ButtonCartStyles = styled.div<ButtonCartProperties>`
     }
     
     &.--Water {
+      .button-cart-content {
+        box-shadow: 0 0 0 1px ${() => Colors.white};
 
+        .badge-count {
+          background: ${() => Colors.white};
+          color: ${() => Colors.black};
+        }
+      }
+    }
+    
+    &.--Fire {
+      .button-cart-content {
+        box-shadow: 0 0 0 1px ${() => Colors.white};
+
+        .badge-count {
+          background: ${() => Colors.white};
+          color: ${() => Colors.black};
+        }
+      }
+    }
+    
+    &.--Grass {
+      .button-cart-content {
+        box-shadow: 0 0 0 1px ${() => Colors.white};
+
+        .badge-count {
+          background: ${() => Colors.white};
+          color: ${() => Colors.black};
+        }
+      }
+    }
+    
+    &.--Electric {
+      .button-cart-content {
+        box-shadow: 0 0 0 1px ${() => Colors.white};
+
+        .badge-count {
+          background: ${() => Colors.white};
+          color: ${() => Colors.black};
+        }
+      }
+    }
+    
+    &.--Psychic {
+      .button-cart-content {
+        box-shadow: 0 0 0 1px ${() => Colors.white};
+
+        .badge-count {
+          background: ${() => Colors.white};
+          color: ${() => Colors.black};
+        }
+      }
+    }
+    
+    &.--Dark {
       .button-cart-content {
         box-shadow: 0 0 0 1px ${() => Colors.white};
 

@@ -85,4 +85,189 @@ export const SearchInputStyles = styled.div<SearchInputProps>`
       }
     }
   }
+
+  &.--Fire {
+    .search-input {
+      background: ${() => Colors.white};
+      
+      input {
+        color: ${() => Colors.black};
+        
+        &::placeholder {
+          color: ${() => Colors["--text-grey"]}
+        }
+      }
+    }
+
+    .search-input-button-wrapper {
+      .button.--btn-icon.--btn-circle .btn-content {
+        background: ${() => Colors.Fire};
+
+        &:hover {
+          background: ${() => Colors["--hover-Fire"]};
+        }
+
+        &:active {
+          background: ${() => Colors["--action-Fire"]};
+
+          svg {
+            transform: scale(.9);
+            transition: ease-in 40ms;
+          }
+        }
+      }
+
+      svg.btn-icon {
+        color: ${() => Colors.white};
+      }
+    }
+  }
+
+  &.--Grass {
+    .search-input {
+      background: ${() => Colors.white};
+      
+      input {
+        color: ${() => Colors.black};
+        
+        &::placeholder {
+          color: ${() => Colors["--text-grey"]}
+        }
+      }
+    }
+
+    .search-input-button-wrapper {
+      .button.--btn-icon.--btn-circle .btn-content {
+        background: ${() => Colors.Grass};
+
+        &:hover {
+          background: ${() => Colors["--hover-Grass"]};
+        }
+
+        &:active {
+          background: ${() => Colors["--action-Grass"]};
+
+          svg {
+            transform: scale(.9);
+            transition: ease-in 40ms;
+          }
+        }
+      }
+
+      svg.btn-icon {
+        color: ${() => Colors.white};
+      }
+    }
+  }
+
+  &.--Electric {
+    .search-input {
+      background: ${() => Colors.white};
+      
+      input {
+        color: ${() => Colors.black};
+        
+        &::placeholder {
+          color: ${() => Colors["--text-grey"]}
+        }
+      }
+    }
+
+    .search-input-button-wrapper {
+      .button.--btn-icon.--btn-circle .btn-content {
+        background: ${() => Colors.Electric};
+
+        &:hover {
+          background: ${() => Colors["--hover-Electric"]};
+        }
+
+        &:active {
+          background: ${() => Colors["--action-Electric"]};
+
+          svg {
+            transform: scale(.9);
+            transition: ease-in 40ms;
+          }
+        }
+      }
+
+      svg.btn-icon {
+        color: ${() => Colors.white};
+      }
+    }
+  }
+
+  &.--Psychic {
+    .search-input {
+      background: ${() => Colors.white};
+      
+      input {
+        color: ${() => Colors.black};
+        
+        &::placeholder {
+          color: ${() => Colors["--text-grey"]}
+        }
+      }
+    }
+
+    .search-input-button-wrapper {
+      .button.--btn-icon.--btn-circle .btn-content {
+        background: ${() => Colors.Psychic};
+
+        &:hover {
+          background: ${() => Colors["--hover-Psychic"]};
+        }
+
+        &:active {
+          background: ${() => Colors["--action-Psychic"]};
+
+          svg {
+            transform: scale(.9);
+            transition: ease-in 40ms;
+          }
+        }
+      }
+
+      svg.btn-icon {
+        color: ${() => Colors.white};
+      }
+    }
+  }
+
+  &.--Dark {
+    .search-input {
+      background: ${() => Colors.white};
+      
+      input {
+        color: ${() => Colors.black};
+        
+        &::placeholder {
+          color: ${() => Colors["--text-grey"]}
+        }
+      }
+    }
+
+    .search-input-button-wrapper {
+      .button.--btn-icon.--btn-circle .btn-content {
+        background: ${() => Colors.Dark};
+
+        &:hover {
+          background: ${() => Colors["--hover-Dark"]};
+        }
+
+        &:active {
+          background: ${() => Colors["--action-Dark"]};
+
+          svg {
+            transform: scale(.9);
+            transition: ease-in 40ms;
+          }
+        }
+      }
+
+      svg.btn-icon {
+        color: ${() => Colors.white};
+      }
+    }
+  }
 `;

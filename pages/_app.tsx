@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import { Provider } from 'react-redux'
 import store from '../redux'
 
-export type RoutesNames = 'Signup' | 'Main' | 'WaterShop';
+export type RoutesNames = 'Signup' | 'Main' | 'WaterShop' | 'FireShop' | 'LeafShop';
 
 export const DEFAULT_AUTH_ROUTE: RoutesNames = 'WaterShop';
 

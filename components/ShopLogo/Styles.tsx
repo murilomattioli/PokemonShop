@@ -39,4 +39,40 @@ export const ShopLogoStyles = styled.div<ShopLogoProperties>`
         }
       }
     }
+
+    &{
+      .shop-logo-content {
+        .shop-logo-img {
+          box-shadow: 0 0 0 1px inset ${() => Colors.white};
+        }
+        
+        .shop-logo-text {
+          color: ${() => Colors.white};
+        }
+      }
+    }
+
+    &.--Grass {
+      .shop-logo-content {
+        .shop-logo-img {
+          box-shadow: 0 0 0 1px inset ${() => Colors.white};
+        }
+        
+        .shop-logo-text {
+          color: ${() => Colors.white};
+        }
+      }
+    }
+
+    &.--Electric {
+      .shop-logo-content {
+        .shop-logo-img {
+          box-shadow: 0 0 0 1px inset ${() => Colors.white};
+        }
+        
+        .shop-logo-text {
+          color: ${() => Colors.white};
+        }
+      }
+    }
 `;

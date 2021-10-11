@@ -2,6 +2,7 @@ import React, { ButtonHTMLAttributes, useCallback, useMemo, useRef } from 'react
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { BUTTON_ICONS } from '.';
 import { ButtonStyles } from './Styles';
+import { ShopTypes } from '../../hooks/uiHooks/useGetShopColor';
 
 export type ButtonIcons = 'edit' | 'trash' | 'signOutAlt' | 'faShoppingCart' | 'faSearch' | 'faChevronLeft';
 
@@ -12,9 +13,9 @@ export type ButtonProperties = {
   width?: number;
   className?: string;
   disabled?: boolean;
-  fillColor?: 'black' | 'white' | 'transparent' | 'Water';
-  iconColor?: 'black' | 'white' | 'transparent' | 'Water';
-  textColor?: 'black' | 'white' | 'transparent' | 'Water';
+  fillColor?: 'black' | 'white' | 'transparent' | ShopTypes;
+  iconColor?: 'black' | 'white' | 'transparent' | ShopTypes;
+  textColor?: 'black' | 'white' | 'transparent' | ShopTypes;
   iconSize?: .8 | 1 | 2 | 3 | 4,
   shadow?: 'dark' | 'light',
   radius?: 'circle';

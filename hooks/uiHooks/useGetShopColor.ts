@@ -1,8 +1,8 @@
 import { useRouter } from "next/dist/client/router";
 import { useCallback } from "react";
 
-export type ShopTypes = 'Water';
-export const SHOP_COLORS: Array<ShopTypes> = ['Water'];
+export type ShopTypes = 'Water' | 'Fire' | 'Grass' | 'Electric' | 'Psychic' | 'Dark';
+export const SHOP_COLORS: Array<ShopTypes> = ['Water', 'Fire', 'Grass', 'Electric', 'Psychic', 'Dark'];
 
 type ReturnProps = [() => ShopTypes | undefined]
 

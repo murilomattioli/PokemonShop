@@ -68,4 +68,44 @@ export const PokemonCardStyles = styled.div<PokemonCardProps>`
       }
     }
   }
+
+  &.--Fire {
+    .pokemon-card-content {
+      .add-button span {
+        color: ${() => Colors.white};
+      }
+    }
+  }
+
+  &.--Grass {
+    .pokemon-card-content {
+      .add-button span {
+        color: ${() => Colors.white};
+      }
+    }
+  }
+
+  &.--Electric {
+    .pokemon-card-content {
+      .add-button span {
+        color: ${() => Colors.black};
+      }
+    }
+  }
+
+  &.--Psychic {
+    .pokemon-card-content {
+      .add-button span {
+        color: ${() => Colors.white};
+      }
+    }
+  }
+
+  &.--Dark {
+    .pokemon-card-content {
+      .add-button span {
+        color: ${() => Colors.white};
+      }
+    }
+  }
 `;

@@ -166,4 +166,109 @@ export const CartStyles = styled.div<CartProperties>`
       }
     };
   }
-  `;
+  
+  &.Fire {
+    .cart-content {
+      background-color: ${() => Colors.white};
+      
+      .cart-title {
+        
+        .title {
+          color: ${() => Colors.black};
+        }
+      }
+
+      .cart-list {
+        
+        
+        &::-webkit-scrollbar-thumb {
+          background-color: ${() => Colors.Fire};
+        }
+      }
+    };
+  }
+  
+  &.Grass {
+    .cart-content {
+      background-color: ${() => Colors.white};
+      
+      .cart-title {
+        
+        .title {
+          color: ${() => Colors.black};
+        }
+      }
+
+      .cart-list {
+        
+        
+        &::-webkit-scrollbar-thumb {
+          background-color: ${() => Colors.Grass};
+        }
+      }
+    };
+  }
+  
+  &.Electric {
+    .cart-content {
+      background-color: ${() => Colors.white};
+      
+      .cart-title {
+        
+        .title {
+          color: ${() => Colors.black};
+        }
+      }
+
+      .cart-list {
+        
+        
+        &::-webkit-scrollbar-thumb {
+          background-color: ${() => Colors.Electric};
+        }
+      }
+    };
+  }
+  
+  &.Psychic {
+    .cart-content {
+      background-color: ${() => Colors.white};
+      
+      .cart-title {
+        
+        .title {
+          color: ${() => Colors.black};
+        }
+      }
+
+      .cart-list {
+        
+        
+        &::-webkit-scrollbar-thumb {
+          background-color: ${() => Colors.Psychic};
+        }
+      }
+    };
+  }
+
+  &.Dark {
+    .cart-content {
+      background-color: ${() => Colors.white};
+      
+      .cart-title {
+        
+        .title {
+          color: ${() => Colors.black};
+        }
+      }
+
+      .cart-list {
+        
+        
+        &::-webkit-scrollbar-thumb {
+          background-color: ${() => Colors.Dark};
+        }
+      }
+    };
+  }
+`;
