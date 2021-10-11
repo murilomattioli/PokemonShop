@@ -135,7 +135,6 @@ export const PageMainStyles = styled.div<MainProps>`
 
         .shop-type {
           min-width: 232px;
-          min-height: 96%;
           padding: 8px;
 
           span {
@@ -159,17 +158,6 @@ export const PageMainStyles = styled.div<MainProps>`
         font-size: 28px;
         line-height: 36px;
         margin-bottom: 32px;
-      }
-
-      .shop-types-navigator {
-        flex-wrap: wrap;
-
-        .shop-type {
-
-          span {
-            line-height: 48px;
-          }
-        }
       }
     }
   }

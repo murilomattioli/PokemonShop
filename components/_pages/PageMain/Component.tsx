@@ -38,18 +38,17 @@ const PageMainComponentNoMemo: React.FC<MainProps> = props => {
       <title>Pokémon Shop - Main</title>
       <div className="main-content">
         <span className='main-title'>Pokémon Shop</span>
-        <span className='main-subtitle'>Select your favorite type!</span>
+        <span className='main-subtitle'>Choose your favorite type!</span>
         <div className="shop-types-navigator">
           {SHOP_TYPES?.map((shopType) => {
             const onClickShopType = () => handleOnClickShopButton(shopType);
             const key = uniqueId();
-            const shopTitle = `${shopType} Shop`;
+            const shopTitle = `${shopType}`;
             return (
               <motion.div
                 key={key}
                 layout
                 whileHover={shopTypeHoverVariant}
-                whileTap={shopTypeTapVariant}
                 onClick={onClickShopType}
                 className={`shop-type --${shopType}`}
                 title={shopTitle}
