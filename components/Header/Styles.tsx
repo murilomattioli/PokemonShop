@@ -43,8 +43,26 @@ export const HeaderStyles = styled.header<HeaderProperties>`
   
   &.Water {
     background: ${() => Colors.Water};
-    .header-content {
-    };
+  }
+  
+  &.Fire {
+    background: ${() => Colors.Fire};
+  }
+  
+  &.Grass {
+    background: ${() => Colors.Grass};
+  }
+  
+  &.Electric {
+    background: ${() => Colors.Electric};
+  }
+  
+  &.Psychic {
+    background: ${() => Colors.Psychic};
+  }
+  
+  &.Dark {
+    background: ${() => Colors.Dark};
   }
 
   @media (min-width: 577px) {

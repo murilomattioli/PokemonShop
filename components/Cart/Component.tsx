@@ -132,7 +132,7 @@ const CartComponentNoMemo: React.FC<CartProperties> = (props) => {
           <Button
             text='Finish'
             height={50}
-            fillColor='Water'
+            fillColor={shopType}
             textColor='white'
             disabled={isEmptyCart}
             onClick={handleFinishPurchase}

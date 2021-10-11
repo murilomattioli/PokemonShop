@@ -1,18 +1,18 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import uniqueId from 'lodash/uniqueId';
-import { PageWaterShopStyles } from './Styles';
+import { PageGrassStyles } from './Styles';
 import { MainProps } from '../../../pages/Main';
 import { Cart, Header, ModalCustom, PokemonList } from '../..';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const PageWaterShopComponentNoMemo: React.FC<MainProps> = props => {
+const PageGrassShopComponentNoMemo: React.FC<MainProps> = props => {
   const { className } = props;
   const [updateHeaderCount, setUpdateHeaderCount] = useState<string>();
   const [showCart, setShowCart] = useState<boolean>(false);
   const [query, setQuery] = useState<string>('');
   const [totalCashBack, setTotalCashBack] = useState<string>('');
   const [showModalPurchase, setShowModalPurchase] = useState<boolean>(false);
-  const pagerWaterShopClassName = useMemo(() => `pager-water-shop${className ? ' ' + className : ''}`, []);
+  const pagerFireShopClassName = useMemo(() => `pager-grass-shop${className ? ' ' + className : ''}`, []);
 
   const handleToggleCart = useCallback((params?: any) => {
     const hideOutside = params?.hideOutside;
@@ -34,19 +34,19 @@ const PageWaterShopComponentNoMemo: React.FC<MainProps> = props => {
   const handleCloseModalPurchase = () => setShowModalPurchase(false);
 
   return (
-    <PageWaterShopStyles {...props} className={pagerWaterShopClassName}>
-      <title>Water Shop - Main</title>
-      <div className='water-shop-container'>
+    <PageGrassStyles {...props} className={pagerFireShopClassName}>
+      <title>Grass Shop - Main</title>
+      <div className='grass-shop-container'>
         <Header
-          shopType='Water'
+          shopType='Grass'
           onToggleCartOutside={handleToggleCart}
           onChangeQuery={setQuery}
           resetCartCount={updateHeaderCount}
         />
         <AnimatePresence>
-          <div className='water-shop-content'>
+          <div className='grass-shop-content'>
             <div className='list-wrapper'>
-              <PokemonList type='Water' query={query} clearQuery={clearQuery} />
+              <PokemonList type='Grass' query={query} clearQuery={clearQuery} />
             </div>
             <div className='cart-section'>
               {showCart && (
@@ -59,7 +59,7 @@ const PageWaterShopComponentNoMemo: React.FC<MainProps> = props => {
                   className='cart-wrapper'
                 >
                   <Cart
-                    shopType='Water'
+                    shopType='Grass'
                     onFinishPurchase={handleFinishPurchase}
                   />
                 </motion.div>
@@ -80,7 +80,7 @@ const PageWaterShopComponentNoMemo: React.FC<MainProps> = props => {
           )}
         </AnimatePresence>
       </div>
-    </PageWaterShopStyles>
+    </PageGrassStyles>
   )
 };
 ''
@@ -88,4 +88,4 @@ const propsAreEqual = (prevProps: MainProps, nextProps: MainProps): boolean => (
   prevProps.className === nextProps.className
 );
 
-export const PageWaterShopComponent = React.memo(PageWaterShopComponentNoMemo, propsAreEqual);
+export const PageGrassShopComponent = React.memo(PageGrassShopComponentNoMemo, propsAreEqual);

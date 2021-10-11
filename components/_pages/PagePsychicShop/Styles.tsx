@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { MainProps } from "../../../pages/Main";
 import { Colors } from '../../../styles/Colors';
 
-export const PageWaterShopStyles = styled.div<MainProps>`
+export const PagePsychicStyles = styled.div<MainProps>`
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -14,7 +14,7 @@ export const PageWaterShopStyles = styled.div<MainProps>`
   max-width: 100vw;
   background: ${() => Colors["--background-black"]};
 
-  .water-shop-container {
+  .psychic-shop-container {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -30,7 +30,7 @@ export const PageWaterShopStyles = styled.div<MainProps>`
       align-items: center;
       justify-content: center;
       color: ${() => Colors.black};
-      box-shadow: 0 0 0 8px ${() => Colors.Water};
+      box-shadow: 0 0 0 8px ${() => Colors.Psychic};
       
       span {
         white-space: nowrap;
@@ -53,11 +53,11 @@ export const PageWaterShopStyles = styled.div<MainProps>`
         border-radius: 8px;
         font-size: 40px;
         font-weight: bold;
-        color: ${() => Colors.Water};
+        color: ${() => Colors.Psychic};
       }
     }
 
-    .water-shop-content {
+    .psychic-shop-content {
       display: flex;
       flex: 1;
       height: 100%;
@@ -72,7 +72,7 @@ export const PageWaterShopStyles = styled.div<MainProps>`
 
         &::-webkit-scrollbar-track {
           border-radius: 6px;
-          background-color: ${() => Colors["--background-Water"]};
+          background-color: ${() => Colors["--background-Psychic"]};
         }
         
         &::-webkit-scrollbar {
@@ -83,7 +83,7 @@ export const PageWaterShopStyles = styled.div<MainProps>`
         
         &::-webkit-scrollbar-thumb {
           border-radius: 6px;
-          background-color: ${() => Colors.Water};
+          background-color: ${() => Colors.Psychic};
         }
       }
 
@@ -94,7 +94,7 @@ export const PageWaterShopStyles = styled.div<MainProps>`
   }
 
   @media (max-width: 807px) {
-    .water-shop-container .water-shop-content .cart-wrapper {
+    .psychic-shop-container .psychic-shop-content .cart-wrapper {
       display: none;
       width: 0px;
       opacity: 0;
@@ -102,7 +102,7 @@ export const PageWaterShopStyles = styled.div<MainProps>`
     }
   }
   @media (min-width: 769px) {
-    .water-shop-container .water-shop-content .cart-wrapper {
+    .psychic-shop-container .psychic-shop-content .cart-wrapper {
       display: flex;
       max-width: 360px;
       overflow: hidden;

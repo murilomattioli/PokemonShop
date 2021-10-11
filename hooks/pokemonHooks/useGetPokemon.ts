@@ -6,7 +6,12 @@ import { ShopTypes } from "../uiHooks/useGetShopColor";
 type ReturnProps = [(type: ShopTypes) => Promise<Array<PokemonProps>>];
 
 const typeIds: Record<ShopTypes, number> = {
+  Fire: 10,
   Water: 11,
+  Grass: 12,
+  Electric: 13,
+  Psychic: 14,
+  Dark: 17,
 };
 
 export default (): ReturnProps => {

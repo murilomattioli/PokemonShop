@@ -77,9 +77,9 @@ const HeaderComponentNoMemo: React.FC<HeaderProperties> = (props) => {
     <HeaderStyles className={headerClassName}>
       <div className='header-content'>
         <div className='header-controls'>
-          <div className='header-control --singout'>
+          {/* <div className='header-control --singout'>
             <Button icon='signOutAlt' radius='circle' fillColor='transparent' iconColor='white' title='Signout' />
-          </div>
+          </div> */}
           <div className='header-control --cart'>
             <ButtonCart theme={shopType} onClick={handleClickCart} count={totalAmount} />
           </div>
