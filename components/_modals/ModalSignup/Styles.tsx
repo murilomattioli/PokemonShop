@@ -28,7 +28,7 @@ export const ModalSignupStyles = styled.div<ModalSignupProps>`
     max-height: ${() => MODAL_CENTER_DEFAULT_HEIGHT}px;
     width: 92vw;
     max-width: ${() => MODAL_CENTER_DEFAULT_WIDTH}px;
-    box-shadow: 0 0 0 1px inset ${Colors["grey-mid"]};
+    box-shadow: 0 0 0 1px inset ${Colors["grey"]};
     background: ${() => Colors.white};
     padding: 0 28px;
   }

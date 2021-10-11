@@ -12,5 +12,5 @@ export const PageMainStyles = styled.div<MainProps>`
   width: 100vw;
   min-width: 100vw;
   max-width: 100vw;
-  background: ${() => Colors["--background-grey"]};
+  background: ${() => Colors["--background-black"]};
 `;

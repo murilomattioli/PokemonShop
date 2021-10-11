@@ -20,11 +20,17 @@ export const ModalCustomStyles = styled.div<ModalCustomProps>`
   .content {
     z-index: 9;
     display: block;
-    background-color: white;
+    position: relative;
 
     .post-manager {
       max-width: 723px;
       width: 92vw;
+    }
+
+    .cart-exit {
+      position: absolute;
+      top: 32px;
+      z-index: 99999999;
     }
   }
 

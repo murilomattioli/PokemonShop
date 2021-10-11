@@ -2,9 +2,8 @@ import React, { ButtonHTMLAttributes, useCallback, useMemo, useRef } from 'react
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { BUTTON_ICONS } from '.';
 import { ButtonStyles } from './Styles';
-import { Colors } from '../../styles/Colors';
 
-export type ButtonIcons = 'edit' | 'trash' | 'signOutAlt' | 'faShoppingCart' | 'faSearch';
+export type ButtonIcons = 'edit' | 'trash' | 'signOutAlt' | 'faShoppingCart' | 'faSearch' | 'faChevronLeft';
 
 export type ButtonProperties = {
   text?: string;
@@ -13,7 +12,11 @@ export type ButtonProperties = {
   width?: number;
   className?: string;
   disabled?: boolean;
-  color?: 'black' | 'white' | 'transparent';
+  fillColor?: 'black' | 'white' | 'transparent' | 'Water';
+  iconColor?: 'black' | 'white' | 'transparent' | 'Water';
+  textColor?: 'black' | 'white' | 'transparent' | 'Water';
+  iconSize?: .8 | 1 | 2 | 3 | 4,
+  shadow?: 'dark' | 'light',
   radius?: 'circle';
   onClick?: (value?: string) => void
 } & React.HTMLAttributes<HTMLButtonElement>;
@@ -24,9 +27,12 @@ const ButtonComponentNoMemo: React.FC<ButtonProperties> = (props) => {
     text,
     icon,
     disabled,
-    color = 'black',
+    fillColor = 'black',
+    iconColor = 'white',
+    shadow,
     radius,
     width,
+    onSubmit = () => { },
     onClick,
     ...buttonProperties
   } = props;
@@ -38,7 +44,7 @@ const ButtonComponentNoMemo: React.FC<ButtonProperties> = (props) => {
     } else return '';
   }, [icon]);
   const showText = useMemo((): boolean => text !== undefined && !showIcon, [text, showIcon]);
-  const buttonClassName = useMemo(() => `button${className ? ' ' + className : ''}${showIcon ? ' --btn-icon' : ''}${disabled ? ' --btn-disabled' : ''}${radius === 'circle' ? ' --btn-circle' : ''}`, [className, showIcon, disabled, radius]);
+  const buttonClassName = useMemo(() => `button${className ? ' ' + className : ''}${showIcon ? ' --btn-icon' : ''}${disabled ? ' --btn-disabled' : ''}${radius === 'circle' ? ' --btn-circle' : ''}${shadow ? ` --btn-shadow-${shadow}` : ''}`, [className, showIcon, disabled, radius, shadow]);
 
   const handleClickButtonElement = useCallback((e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     if (onClick) {
@@ -68,6 +74,7 @@ const ButtonComponentNoMemo: React.FC<ButtonProperties> = (props) => {
           ref={buttonRef}
           className='button'
           onClick={handleClickButtonElement}
+          onSubmit={onSubmit}
           hidden
         />
       </div>

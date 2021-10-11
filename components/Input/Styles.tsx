@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { INPUT_DEFAULT_BACKGROUND_COLOR_NAME, INPUT_DEFAULT_COLOR_NAME, INPUT_DEFAULT_HEIGHT } from ".";
-import { ShopColorNames } from "../../hooks/uiHooks/useGetShopColor";
+import { ShopTypes } from "../../hooks/uiHooks/useGetShopColor";
 import { Colors } from '../../styles/Colors';
 import { InputProps } from "./Component";
 
@@ -11,11 +11,11 @@ export const InputStyles = styled.div<InputProps>`
   max-height: ${() => INPUT_DEFAULT_HEIGHT}px;
   display: flex;
   flex: 1;
-  background: ${({ color }: { color?: ShopColorNames }) => Colors[`--background-${color || INPUT_DEFAULT_BACKGROUND_COLOR_NAME}`]};
+  background: ${({ color }: { color?: ShopTypes }) => Colors[`--background-${color || INPUT_DEFAULT_BACKGROUND_COLOR_NAME}`]};
   
 
   &.--bordered {
-    box-shadow: ${() => Colors.grey};
+    box-shadow: 0 0 0 1px ${() => Colors.grey};
   }
 
   input {

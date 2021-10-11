@@ -1,9 +1,9 @@
 import React, { InputHTMLAttributes, useCallback, useMemo, useRef } from 'react';
-import { ShopColorNames } from '../../hooks/uiHooks/useGetShopColor';
+import { ShopTypes } from '../../hooks/uiHooks/useGetShopColor';
 import { InputStyles } from './Styles';
 
 export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
-  color?: ShopColorNames,
+  color?: ShopTypes,
   radius?: 'circle',
   bordered?: boolean,
   onChangeValue?: (value: string) => void;

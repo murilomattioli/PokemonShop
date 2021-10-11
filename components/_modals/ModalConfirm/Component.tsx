@@ -46,14 +46,14 @@ const ModalConfirmComponentNoMemo: React.FC<ModalConfirmProps> = (props) => {
             <Button
               text={cancelText}
               onClick={handleOnCancel}
-              color='white'
+              fillColor='white'
             />
           </div>
           <div className='button-wrapper'>
             <Button
               text={confirmText}
               onClick={handleOnConfirm}
-              color='white'
+              fillColor='white'
             />
           </div>
         </div>

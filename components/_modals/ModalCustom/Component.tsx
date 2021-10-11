@@ -7,13 +7,14 @@ const ModalCustomComponentNoMemo: React.FC<ModalCustomProps> = (props) => {
   const {
     className,
     component,
+    style,
     onClickClose = () => { },
   } = props;
-  const modalCustomClassName = useMemo(() => `post-creator ${className}`, []);
+  const modalCustomClassName = useMemo(() => `modal-custom${className ? ` ${className}` : ''}`, [className]);
 
   return (
     //@ts-ignore
-    <ModalCustomStyles className={modalCustomClassName}>
+    <ModalCustomStyles className={modalCustomClassName} style={style}>
       <motion.div
         className="background-modal"
         onClick={onClickClose}
@@ -34,7 +35,11 @@ const ModalCustomComponentNoMemo: React.FC<ModalCustomProps> = (props) => {
 }
 
 const propsAreEqual = (prevProps: ModalCustomProps, nextProps: ModalCustomProps): boolean => (
-  prevProps.className === nextProps.className
+  prevProps.className === nextProps.className &&
+  prevProps.component === nextProps.component &&
+  prevProps.onClickClose === nextProps.onClickClose &&
+  prevProps.style === nextProps.style &&
+  prevProps.showExit === nextProps.showExit
 );
 
 export const ModalCustomComponent = React.memo(ModalCustomComponentNoMemo, propsAreEqual);
