@@ -14,6 +14,7 @@ export interface HeaderProperties {
   onToggleCartOutside?: (params?: any) => void;
   onShowCartModal?: (params?: any) => void;
   onChangeQuery?: (query: string) => void;
+  onFinishPurchase?: (totalCashBack: string) => void;
 };
 
 const HeaderComponentNoMemo: React.FC<HeaderProperties> = (props) => {
@@ -24,6 +25,7 @@ const HeaderComponentNoMemo: React.FC<HeaderProperties> = (props) => {
     onToggleCartOutside = () => { },
     onShowCartModal = () => { },
     onChangeQuery = () => { },
+    onFinishPurchase = () => { },
   } = props;
   const [showModalCart, setShowModalCart] = useState<boolean>();
   const [cart, setCart] = useState<CartType>([]);
@@ -72,6 +74,11 @@ const HeaderComponentNoMemo: React.FC<HeaderProperties> = (props) => {
     setShowModalCart(false)
   };
 
+  const handleFinishPurchase = useCallback((totalCashBack: string) => {
+    onFinishPurchase(totalCashBack);
+    handleCloseCart();
+  }, [handleCloseCart, onFinishPurchase]);
+
   return (
     //@ts-ignore
     <HeaderStyles className={headerClassName}>
@@ -92,7 +99,7 @@ const HeaderComponentNoMemo: React.FC<HeaderProperties> = (props) => {
         </div>
       </div>
       {showModalCart && (
-        <ModalCustom component={<Cart shopType={shopType} />} onClickClose={handleCloseCart} />
+        <ModalCustom component={<Cart shopType={shopType} onFinishPurchase={handleFinishPurchase} />} onClickClose={handleCloseCart} />
       )}
     </HeaderStyles >
   );

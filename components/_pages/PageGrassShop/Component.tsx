@@ -12,7 +12,7 @@ const PageGrassShopComponentNoMemo: React.FC<MainProps> = props => {
   const [query, setQuery] = useState<string>('');
   const [totalCashBack, setTotalCashBack] = useState<string>('');
   const [showModalPurchase, setShowModalPurchase] = useState<boolean>(false);
-  const pagerFireShopClassName = useMemo(() => `pager-grass-shop${className ? ' ' + className : ''}`, []);
+  const pagerFireShopClassName = useMemo(() => `page-grass-shop${className ? ' ' + className : ''}`, []);
 
   const handleToggleCart = useCallback((params?: any) => {
     const hideOutside = params?.hideOutside;
@@ -42,6 +42,7 @@ const PageGrassShopComponentNoMemo: React.FC<MainProps> = props => {
           onToggleCartOutside={handleToggleCart}
           onChangeQuery={setQuery}
           resetCartCount={updateHeaderCount}
+          onFinishPurchase={handleFinishPurchase}
         />
         <AnimatePresence>
           <div className='grass-shop-content'>

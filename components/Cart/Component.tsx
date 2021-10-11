@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import { formatPrice } from '.';
 import { CartStyles } from './Styles';
-import { Button, ModalCustom } from '..';
+import { Button } from '..';
 import { ShopTypes } from '../../hooks/uiHooks/useGetShopColor';
 import { CartType } from '../../hooks/cartHooks/types';
 import cartHooks from '../../hooks/cartHooks';

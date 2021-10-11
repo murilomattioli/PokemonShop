@@ -15,20 +15,20 @@ export const ButtonCartStyles = styled.div<ButtonCartProperties>`
       
       .badge-count {
         position: absolute;
-        right: -2px;
-        top: -2px;
-        font-size: 8px;
         font-weight: bold;
-        width: 12px;
-        height: 12px;
         align-items: center;
         display: flex;
         justify-content: center;
-        border-radius: 8px;
         padding: 2px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        font-size: 12px;
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        right: -12px;
+        top: -12px;
       }
 
       .button.--btn-icon.--btn-circle {
