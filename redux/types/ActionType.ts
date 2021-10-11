@@ -1,3 +1,3 @@
-import { UserActionType } from ".";
+import { CartActionType, UserActionType } from ".";
 
-export type ActionType = UserActionType;
+export type ActionType = UserActionType | CartActionType;
