@@ -7,7 +7,7 @@ type ReturnProps = [(newUser: UserType) => Promise<UserType> | null];
 export default (): ReturnProps => {
   const setUserLocalStorage = useCallback((newUser: UserType): Promise<UserType> => {
     return new Promise((resolve, reject) => {
-      const isValidUser = true;
+      const isValidUser = newUser.username.length > 0;
 
       if (isValidUser) {
         localStorage.setItem(LOCAL_STORAGE_USER_KEY, newUser.username);
