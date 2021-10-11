@@ -159,17 +159,6 @@ export const PageMainStyles = styled.div<MainProps>`
         line-height: 36px;
         margin-bottom: 32px;
       }
-
-      .shop-types-navigator {
-        flex-wrap: wrap;
-
-        .shop-type {
-
-          span {
-            line-height: 48px;
-          }
-        }
-      }
     }
   }
 `;
