@@ -29,8 +29,12 @@ export const Colors = {
   '--action-black': 'rgba(255, 255, 255, 0.16)',
   '--action-white': 'rgba(0, 0, 0, 0.16)',
 
-
+  // Icon Color
+  '--icon-Water': '#ffffff',
   '--icon-black': '#ffffff',
   '--icon-white': '#000000',
   '--icon-transparent': '#000000',
+
+  '--shadow-dark': 'rgba(0, 0, 0, 0.80)',
+  '--shadow-light': 'rgba(255, 255, 255, 0.20)'
 }
