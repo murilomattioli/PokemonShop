@@ -42,6 +42,7 @@ const PageFireShopComponentNoMemo: React.FC<MainProps> = props => {
           onToggleCartOutside={handleToggleCart}
           onChangeQuery={setQuery}
           resetCartCount={updateHeaderCount}
+          onFinishPurchase={handleFinishPurchase}
         />
         <AnimatePresence>
           <div className='fire-shop-content'>

@@ -12,7 +12,7 @@ const PageElectricShopComponentNoMemo: React.FC<MainProps> = props => {
   const [query, setQuery] = useState<string>('');
   const [totalCashBack, setTotalCashBack] = useState<string>('');
   const [showModalPurchase, setShowModalPurchase] = useState<boolean>(false);
-  const pagerFireShopClassName = useMemo(() => `pager-electric-shop${className ? ' ' + className : ''}`, []);
+  const pagerFireShopClassName = useMemo(() => `page-electric-shop${className ? ' ' + className : ''}`, []);
 
   const handleToggleCart = useCallback((params?: any) => {
     const hideOutside = params?.hideOutside;
@@ -29,7 +29,7 @@ const PageElectricShopComponentNoMemo: React.FC<MainProps> = props => {
     setShowModalPurchase(true);
     setTotalCashBack(cashBack);
     setUpdateHeaderCount(uniqueId());
-  }, []);
+  }, [setShowModalPurchase, setTotalCashBack, setUpdateHeaderCount]);
 
   const handleCloseModalPurchase = () => setShowModalPurchase(false);
 
@@ -42,6 +42,7 @@ const PageElectricShopComponentNoMemo: React.FC<MainProps> = props => {
           onToggleCartOutside={handleToggleCart}
           onChangeQuery={setQuery}
           resetCartCount={updateHeaderCount}
+          onFinishPurchase={handleFinishPurchase}
         />
         <AnimatePresence>
           <div className='electric-shop-content'>

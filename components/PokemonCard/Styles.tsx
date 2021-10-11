@@ -58,6 +58,35 @@ export const PokemonCardStyles = styled.div<PokemonCardProps>`
     .add-button {
       display: flex;
       flex: 1;
+      position: relative;
+
+      @keyframes myAnim {
+        0%,
+        50%,
+        100% {
+          opacity: 1;
+        }
+        
+        25%,
+        75% {
+          bottom: 32px;
+          opacity: 0;
+        }
+      }
+
+      
+      :active {
+        ::after {
+          content: '+1';
+          font-size: 24px;
+          font-weight: bold;
+          color: ${() => Colors.white};
+          position: absolute;
+          bottom: 0px;
+          right: 18px;
+          animation: myAnim .5s ease 0s 1;
+        }
+      }
     }
   }
 

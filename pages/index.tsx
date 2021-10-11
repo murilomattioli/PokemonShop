@@ -1,12 +1,11 @@
 import type { NextPage } from 'next'
+import { useRouter } from 'next/dist/client/router';
 import { useEffect } from 'react';
-import userHooks from '../hooks/userHooks';
 
 const Init: NextPage = () => {
-  const [authUserWithRedirect] = userHooks.useAuthUserWithRedirect();
-
+  const router = useRouter();
   useEffect(() => {
-    authUserWithRedirect('Main');
+    router.push('/Main');
   }, []);
 
   return <div className='root' />

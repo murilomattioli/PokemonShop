@@ -28,6 +28,8 @@ const ButtonCartComponentNoMemo: React.FC<ButtonCartProperties> = (props) => {
     e.preventDefault();
   }, [onClick]);
 
+  const countValue = useMemo(() => `${Number(count) > 99 ? '99+' : count}`, [count]);
+
   return (
     //@ts-ignore
     <ButtonCartStyles className={cartButtonClassName} onClick={handleClick} title='Your cart'>
@@ -40,7 +42,7 @@ const ButtonCartComponentNoMemo: React.FC<ButtonCartProperties> = (props) => {
           iconColor='white'
         />
         {showBadgeCount && (
-          <span className='badge-count'>{count}</span>
+          <span className='badge-count'>{countValue}</span>
         )}
       </div>
     </ButtonCartStyles>
