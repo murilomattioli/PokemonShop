@@ -1,1 +1,1 @@
-export type ActionsTypes = 'user/set';
+export type ActionsTypes = 'user/set' | 'cart/reload';
