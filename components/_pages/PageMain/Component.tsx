@@ -18,7 +18,7 @@ const PageMainComponentNoMemo: React.FC<MainProps> = props => {
   }, [router]);
 
   const shopTypeHoverVariant = {
-    scale: 1.5,
+    scale: 1.1,
     transition: {
       duration: 0.2,
       ease: 'easeOut'
@@ -26,10 +26,10 @@ const PageMainComponentNoMemo: React.FC<MainProps> = props => {
   };
 
   const shopTypeTapVariant = {
-    scale: 200,
+    scale: 11000,
     transition: {
       duration: 8,
-      ease: 'easeOut'
+      ease: 'easeOut',
     }
   };
 
