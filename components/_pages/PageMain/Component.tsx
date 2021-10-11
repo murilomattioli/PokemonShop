@@ -14,7 +14,7 @@ const PageMainComponentNoMemo: React.FC<MainProps> = props => {
   }, [router]);
 
   const handleClickWaterShop = useCallback(() => {
-    handleOnClickShopButton('WaterShop');
+    handleOnClickShopButton('Water');
   }, [handleOnClickShopButton]);
 
 
