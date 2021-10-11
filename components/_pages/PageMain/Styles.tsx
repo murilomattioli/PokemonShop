@@ -135,7 +135,6 @@ export const PageMainStyles = styled.div<MainProps>`
 
         .shop-type {
           min-width: 232px;
-          min-height: 96%;
           padding: 8px;
 
           span {

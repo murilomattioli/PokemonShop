@@ -49,7 +49,6 @@ const PageMainComponentNoMemo: React.FC<MainProps> = props => {
                 key={key}
                 layout
                 whileHover={shopTypeHoverVariant}
-                whileTap={shopTypeTapVariant}
                 onClick={onClickShopType}
                 className={`shop-type --${shopType}`}
                 title={shopTitle}
