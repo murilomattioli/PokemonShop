@@ -28,7 +28,7 @@
     <li>
       <a href="#about-the-project">Project</a>
       <ul>
-        <li><a href="#about-the-project" target="_blank">View Demo</a></li>
+        <li><a href="https://pokemon-shop-theta.vercel.app" target="_blank">View Demo</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
